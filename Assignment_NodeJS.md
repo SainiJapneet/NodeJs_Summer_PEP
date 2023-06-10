@@ -36,6 +36,17 @@ sum += input[i];
 }
 console.log("Mean = " + sum/input.length);
 
+let median = 0;
+const sortedArr = input.sort();
+const middle = Math.floor(sortedArr.length / 2);
+if(sortedArr.length % 2 == 1){
+median = sortedArr[middle];
+}
+else{
+median = (sortedArr[middle] + sortedArr[middle - 1])/2
+}
+console.log("Median = " + median);
+
 
 4. Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
 
